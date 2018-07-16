@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <button type="button" class="btn btn=primary" routerLink="/admin">Login</button>
+  </div>
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th># Name</th>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Bats</th>
+      <th>Throws</th>
+    </tr>
+    <tr *ngFor="let player of players">
+      <a [routerLink]="['/view', player.number]">
+      <td>
+        {{player.number}}
+      </td>
+      <td>
+        {{player.firstName}}
+      </td>
+      <td>
+        {{player.lastName}}
+      </td>
+    </a>
+      <td>
+        {{player.position}}
+      </td>
+      <td>
+        {{player.team}}
+      </td>
+      <td>
+        {{player.bats}}
+      </td>
+      <td>
+        {{player.thrws}}
+      </td>
+    </tr>
+  </table>
+</div>

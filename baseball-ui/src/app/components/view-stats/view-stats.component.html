@@ -1,0 +1,228 @@
+<div class="container">
+  <div class="row">
+    <button type="button" class="btn btn=primary" routerLink="">Logout</button>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn=primary" routerLink="/admin">Back to Roster</button>
+  </div>
+  <div *ngIf = "player1?.position == 'Pitcher'">
+    <table class ="table table-bordered table-inverse">
+      <tr>
+        <th>Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Position</th>
+        <th>Team</th>
+        <th>Bats</th>
+        <th>Throws</th>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>Games</th>
+        <th>Games Started</th>
+        <th>Complete Games</th>
+        <th>Shutout</th>
+        <th>Saves</th>
+        <th>Save Opportunity</th>
+        <th>Innings Pitched</th>
+        <th>Hits</th>
+        <th>Runs</th>
+        <th>Earned Runs</th>
+        <th>Homeruns</th>
+        <th>Hit Batters</th>
+        <th>Walks</th>
+        <th>Intentional Walks</th>
+        <th>Strikeouts</th>
+        <th>Opponent AVG</th>
+        <th>WHIP</th>
+        <th>ERA</th>
+      </tr>
+      <tr>
+        <td>
+          {{player1?.number}}
+        </td>
+        <td>
+          {{player1?.firstName}}
+        </td>
+        <td>
+          {{player1?.lastName}}
+        </td>
+        <td>
+          {{player1?.position}}
+        </td>
+        <td>
+          {{player1?.team}}
+        </td>
+        <td>
+          {{player1?.bats}}
+        </td>
+        <td>
+          {{player1?.thrws}}
+        </td>
+        <td>
+          {{player?.wins}}
+        </td>
+        <td>
+          {{player?.losses}}
+        </td>
+        <td>
+          {{player?.games}}
+        </td>
+        <td>
+          {{player?.gamesStarted}}
+        </td>
+        <td>
+          {{player?.completeGame}}
+        </td>
+        <td>
+          {{player?.shutout}}
+        </td>
+        <td>
+          {{player?.saves}}
+        </td>
+        <td>
+          {{player?.saveOpportunity}}
+        </td>
+        <td>
+          {{player?.inningsPitched}}
+        </td>
+        <td>
+          {{player?.hits}}
+        </td>
+        <td>
+          {{player?.runs}}
+        </td>
+        <td>
+          {{player?.earnedRuns}}
+        </td>
+        <td>
+          {{player?.homeruns}}
+        </td>
+        <td>
+          {{player?.hitBatters}}
+        </td>
+        <td>
+          {{player?.walks}}
+        </td>
+        <td>
+          {{player?.intentionalWalks}}
+        </td>
+        <td>
+          {{player?.strikeouts}}
+        </td>
+        <td>
+          {{player?.opponentAVG}}
+        </td>
+        <td>
+          {{player?.whip}}
+        </td>
+        <td>
+          {{player?.era}}
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div *ngIf = "player1?.position != 'Pitcher'">
+    <table class ="table table-bordered table-inverse">
+      <tr>
+        <th>Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Position</th>
+        <th>Team</th>
+        <th>Bats</th>
+        <th>Throws</th>
+        <th>Games</th>
+        <th>At Bats</th>
+        <th>Runs</th>
+        <th>Hits</th>
+        <th>Total Bases</th>
+        <th>Doubles</th>
+        <th>Triples</th>
+        <th>Home Runs</th>
+        <th>Walks</th>
+        <th>Intentional Walks</th>
+        <th>Strikeouts</th>
+        <th>Stolen Bases</th>
+        <th>Caught Stealing</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>Slugging</th>
+        <th>OPS</th>
+      </tr>
+      <tr>
+        <td>
+          {{player1?.number}}
+        </td>
+        <td>
+          {{player1?.firstName}}
+        </td>
+        <td>
+          {{player1?.lastName}}
+        </td>
+        <td>
+          {{player1?.position}}
+        </td>
+        <td>
+          {{player1?.team}}
+        </td>
+        <td>
+          {{player1?.bats}}
+        </td>
+        <td>
+          {{player1?.thrws}}
+        </td>
+        <td>
+          {{player?.games}}
+        </td>
+        <td>
+          {{player?.atBats}}
+        </td>
+        <td>
+          {{player?.runs}}
+        </td>
+        <td>
+          {{player?.hits}}
+        </td>
+        <td>
+          {{player?.totalBases}}
+        </td>
+        <td>
+          {{player?.doubles}}
+        </td>
+        <td>
+          {{player?.triples}}
+        </td>
+        <td>
+          {{player?.homeruns}}
+        </td>
+        <td>
+          {{player?.walks}}
+        </td>
+        <td>
+          {{player?.intentionalWalks}}
+        </td>
+        <td>
+          {{player?.strikeouts}}
+        </td>
+        <td>
+          {{player?.stolenBases}}
+        </td>
+        <td>
+          {{player?.caughtStealing}}
+        </td>
+        <td>
+          {{player?.avg}}
+        </td>
+        <td>
+          {{player?.obp}}
+        </td>
+        <td>
+          {{player?.slugging}}
+        </td>
+        <td>
+          {{player?.ops}}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
