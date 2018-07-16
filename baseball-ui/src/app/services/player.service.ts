@@ -12,10 +12,10 @@ export class PlayerService {
   constructor(private http:HttpClient) { }
 
   getPlayers() {
-    return this.http.get('/server/api/v1/players/secured');
+    return this.http.get('/server/api/v1/players');
   }
 
   getPlayer(number: number) {
-    return this.http.get('/server/api/v1/players/secured/stats/' + number);
+    return this.http.get('/server/api/v1/players/stats/' + number);
   }
 }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CanActivate } from '@angular/router';
 // import { AuthService } from ''
+
 @Injectable()
 export class AppService {
   authenticated = false;
@@ -9,15 +10,15 @@ export class AppService {
   constructor(private http: HttpClient) {
   }
 
-  authenticate() {
+  authenticate(credentials, callback) {
     const headers = new HttpHeaders(credentials ? {
       authorization: 'basic ' + btoa(credentials.username + ':' + credentials.password)} : {});
 
       this.http.get('server/user', {headers: headers}).subscribe(response => {
         if(response['name']) {
-          this.authenticate = true;
+          this.authenticated = true;
         } else {
-          this.authenticate = false;
+          this.authenticated = false;
         }
         return callback && callback();
       });

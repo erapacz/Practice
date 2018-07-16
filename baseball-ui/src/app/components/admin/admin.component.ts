@@ -28,7 +28,7 @@ export class AdminComponent implements OnInit {
 
   logout() {
     this.http.post('server/logout', {}).subscribe(data => {
-      this.app.authenticate = false;
+      this.app.authenticated = false;
       this.router.navigateByUrl('');
     });
   }
