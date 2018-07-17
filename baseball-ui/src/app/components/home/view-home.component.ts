@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerService } from '../../services/player.service';
 import { ActivatedRoute } from '@angular/router';
-import { AppService } from '../../app.service';
+// import { AppService } from '../../app.service';
 
 @Component({
   selector: 'app-view-home',

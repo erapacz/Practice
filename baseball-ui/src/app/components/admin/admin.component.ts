@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerService } from '../../services/player.service';
-import { AppService } from '../../app.service';
+// import { AppService } from '../../app.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class AdminComponent implements OnInit {
   public players;
 
-  constructor(private playerService: PlayerService, private http: HttpClient, private router: Router, private app: AppService) { }
+  constructor(private playerService: PlayerService, private http: HttpClient, private router: Router, ) { }
 
   ngOnInit() {
     this.getPlayers();
@@ -26,13 +26,13 @@ export class AdminComponent implements OnInit {
     );
   }
 
-  logout() {
-    this.http.post('server/logout', {}).subscribe(data => {
-      this.app.authenticated = false;
-      this.router.navigateByUrl('');
-    });
-  }
-  authenticated() {
-    return this.app.authenticated;
-  };
+  // logout() {
+  //   this.http.post('server/logout', {}).subscribe(data => {
+  //     this.app.authenticated = false;
+  //     this.router.navigateByUrl('');
+  //   });
+  // }
+  // authenticated() {
+  //   return this.app.authenticated;
+  // };
 }
