@@ -18,11 +18,11 @@ password: string;
   }
 
   login() {
-    return this.http.get('/server/api/v1/players/secured');
-  //   if(this.username == 'eric' && this.password == '123') {
-  //   this.router.navigate(['admin']);
-  // }else {
-  //   alert("Invalid credentials")
-  // }
+    // return this.http.get('/server/api/v1/players/secured');
+    if(this.username == 'eric' && this.password == '123') {
+    this.router.navigate(['admin']);
+  }else {
+    alert("Invalid credentials")
+  }
   }
 }
